@@ -16,10 +16,10 @@ public class ThanosLogApplication {
 	@RequestMapping("/log/{level}")
 	public void writeLog(@PathVariable String level){
 		Logger logger = LogManager.getRootLogger();
-		System.out.println("---------------------------------------current level: "+logger.getLevel());
-		logger.info("----------------------------------------------INFO");
-		logger.debug("---------------------------------------------DEBUG");
-		logger.error("---------------------------------------------ERROR");
+		System.out.println("-----------------------------------------current level: "+logger.getLevel());
+		logger.info("------------------------------------------------INFO");
+		logger.debug("-----------------------------------------------DEBUG");
+		logger.error("-----------------------------------------------ERROR");
 
 		Level l = Level.toLevel(level);
 		logger.setLevel(l);
